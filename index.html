@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strona Główna - AutoSerwis</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="img/euromaster2.svg" alt="Strona Główna" />
+        </a>
+        <button class="menu-toggle">☰</button>
+        <nav id="menu">
+          <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#">☰</a></li>
+            <li class="hideOnMobile">
+              <a href="index.html"
+                ><img src="img/euromaster2.svg" alt="Strona Główna"
+              /></a>
+            </li>
+            <li><a href="serwis-opon.html">Serwis Opon</a></li>
+            <li><a href="mechanika.html">Mechanika Samochodowa</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+          <ul class="main-menu">
+            <li><a href="serwis-opon.html">Serwis Opon</a></li>
+            <li><a href="mechanika.html">Mechanika Samochodowa</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Witamy w AutoSerwis!</h1>
+        <p>
+          Profesjonalna obsługa Twojego samochodu - szybko, sprawnie i fachowo.
+        </p>
+      </section>
+      <section class="services">
+        <h2>Nasze Usługi</h2>
+        <div class="service-cards">
+          <div class="card">
+            <h3>Wulkanizacja czynna całą dobę 7 dni w tygodniu</h3>
+            <p>
+              -wymiana i naprawa opon <br />
+              -sprzedaż opon nowych i używanych <br />
+              -prostowanie felg <br />
+              -spawanie felg <br />
+              -hotel opon/kół<br />
+            </p>
+          </div>
+          <div class="card">
+            <h3>Mechanika samochodowa czynna pn-pt 8:00-18:00</h3>
+            <p>
+              -serwis i naprawa samochodów <br />
+              -diagnostyka komputerowa<br />
+              -serwis i naprawa układów klimatyzacji<br />
+            </p>
+          </div>
+          <div class="card">
+            <h3>Serwis i naprawa klimatyzacji czynne pn.-pt. 8:00-17:00</h3>
+            <p>
+              -Serwis układów klimatyzacji R134A i R1234YF<br />
+              -Naprawa układów klimatyzacji<br />
+              -Odgrzybianie układów klimatyzacji (ultradźwieki + ozon)<br />
+              -Montaż układów klimatyzacji<br />
+              -Konwersja układów klimatyzacji<br />
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <p>Copyright © Allik 2024</p>
+      </div>
+    </footer>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
