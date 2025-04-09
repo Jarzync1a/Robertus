@@ -251,28 +251,87 @@ main {
 }
 
 .card2 {
-  float: left;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; /* Clean white background */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
   padding: 20px;
-  width: 50%;
-  height: 80%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  width: 100%; /* Full width for responsiveness */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+  text-align: center; /* Center-align content */
+}
+
+.card2:hover {
+  transform: translateY(-10px); /* Lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .card2 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.8rem; /* Larger heading */
+  margin-bottom: 15px;
+  color: #113d85; /* Accent color */
 }
 
 .card2 p {
   font-size: 1rem;
+  color: #555; /* Subtle text color */
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 20px;
+}
+
+.card2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to images */
+}
+
+.card2 button {
+  background-color: #113d85; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card2 button:hover {
+  background-color: #0d2e63; /* Darker shade on hover */
+}
+
+.card2-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next row */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Add spacing between cards */
+  padding: 20px; /* Add padding around the container */
+}
+
+.card2 {
+  float: left;
+  width: auto; /* Full width for responsiveness */
+  flex: 1 1 calc(33.333% - 40px); /* Responsive width: 3 cards per row */
+  max-width: 350px; /* Limit maximum width */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+@media (max-width: 768px) {
+  .card2 {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card2 {
+    flex: 1 1 100%; /* 1 card per row on very small screens */
+  }
 }
 
 @media (max-width: 380px) {
@@ -341,4 +400,45 @@ header .logo img {
   width: 100%;
   height: auto;
   margin: 0 auto; /* Center the image */
+}
+
+.contact-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-info {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .contact-info {
+    flex: 1;
+    max-width: calc(50% - 15px);
+  }
 }
